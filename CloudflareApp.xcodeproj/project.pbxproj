@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		970A12EA2A7B5AF100F71C24 /* cfdashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A12E92A7B5AF100F71C24 /* cfdashApp.swift */; };
-		970A12EC2A7B5AF100F71C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A12EB2A7B5AF100F71C24 /* ContentView.swift */; };
+		970A12EA2A7B5AF100F71C24 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A12E92A7B5AF100F71C24 /* App.swift */; };
+		970A12EC2A7B5AF100F71C24 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A12EB2A7B5AF100F71C24 /* MainView.swift */; };
 		970A12EE2A7B5AF400F71C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970A12ED2A7B5AF400F71C24 /* Assets.xcassets */; };
 		970A12F12A7B5AF400F71C24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970A12F02A7B5AF400F71C24 /* Preview Assets.xcassets */; };
+		97109F032A7B6A93008D5462 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97109F022A7B6A93008D5462 /* SettingView.swift */; };
+		97109F052A7B6FF4008D5462 /* DomainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97109F042A7B6FF4008D5462 /* DomainView.swift */; };
+		97109F072A7B7184008D5462 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97109F062A7B7184008D5462 /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		970A12E62A7B5AF100F71C24 /* cfdash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cfdash.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		970A12E92A7B5AF100F71C24 /* cfdashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cfdashApp.swift; sourceTree = "<group>"; };
-		970A12EB2A7B5AF100F71C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		970A12E62A7B5AF100F71C24 /* CloudflareApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudflareApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		970A12E92A7B5AF100F71C24 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		970A12EB2A7B5AF100F71C24 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		970A12ED2A7B5AF400F71C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		970A12F02A7B5AF400F71C24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97109F022A7B6A93008D5462 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		97109F042A7B6FF4008D5462 /* DomainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainView.swift; sourceTree = "<group>"; };
+		97109F062A7B7184008D5462 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +41,9 @@
 		970A12DD2A7B5AF100F71C24 = {
 			isa = PBXGroup;
 			children = (
-				970A12E82A7B5AF100F71C24 /* cfdash */,
+				970A12ED2A7B5AF400F71C24 /* Assets.xcassets */,
+				970A12EF2A7B5AF400F71C24 /* Preview Content */,
+				970A12E82A7B5AF100F71C24 /* Views */,
 				970A12E72A7B5AF100F71C24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,20 +51,21 @@
 		970A12E72A7B5AF100F71C24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				970A12E62A7B5AF100F71C24 /* cfdash.app */,
+				970A12E62A7B5AF100F71C24 /* CloudflareApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		970A12E82A7B5AF100F71C24 /* cfdash */ = {
+		970A12E82A7B5AF100F71C24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				970A12E92A7B5AF100F71C24 /* cfdashApp.swift */,
-				970A12EB2A7B5AF100F71C24 /* ContentView.swift */,
-				970A12ED2A7B5AF400F71C24 /* Assets.xcassets */,
-				970A12EF2A7B5AF400F71C24 /* Preview Content */,
+				970A12E92A7B5AF100F71C24 /* App.swift */,
+				970A12EB2A7B5AF100F71C24 /* MainView.swift */,
+				97109F022A7B6A93008D5462 /* SettingView.swift */,
+				97109F042A7B6FF4008D5462 /* DomainView.swift */,
+				97109F062A7B7184008D5462 /* AboutView.swift */,
 			);
-			path = cfdash;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		970A12EF2A7B5AF400F71C24 /* Preview Content */ = {
@@ -70,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		970A12E52A7B5AF100F71C24 /* cfdash */ = {
+		970A12E52A7B5AF100F71C24 /* CloudflareApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 970A12F42A7B5AF400F71C24 /* Build configuration list for PBXNativeTarget "cfdash" */;
+			buildConfigurationList = 970A12F42A7B5AF400F71C24 /* Build configuration list for PBXNativeTarget "CloudflareApp" */;
 			buildPhases = (
 				970A12E22A7B5AF100F71C24 /* Sources */,
 				970A12E32A7B5AF100F71C24 /* Frameworks */,
@@ -82,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = cfdash;
+			name = CloudflareApp;
 			productName = cfdash;
-			productReference = 970A12E62A7B5AF100F71C24 /* cfdash.app */;
+			productReference = 970A12E62A7B5AF100F71C24 /* CloudflareApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 970A12E12A7B5AF100F71C24 /* Build configuration list for PBXProject "cfdash" */;
+			buildConfigurationList = 970A12E12A7B5AF100F71C24 /* Build configuration list for PBXProject "CloudflareApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				970A12E52A7B5AF100F71C24 /* cfdash */,
+				970A12E52A7B5AF100F71C24 /* CloudflareApp */,
 			);
 		};
 /* End PBXProject section */
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				970A12EC2A7B5AF100F71C24 /* ContentView.swift in Sources */,
-				970A12EA2A7B5AF100F71C24 /* cfdashApp.swift in Sources */,
+				97109F032A7B6A93008D5462 /* SettingView.swift in Sources */,
+				970A12EC2A7B5AF100F71C24 /* MainView.swift in Sources */,
+				97109F052A7B6FF4008D5462 /* DomainView.swift in Sources */,
+				970A12EA2A7B5AF100F71C24 /* App.swift in Sources */,
+				97109F072A7B7184008D5462 /* AboutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +283,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"cfdash/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = MSD5A9BZTN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,6 +292,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +313,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"cfdash/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
 				DEVELOPMENT_TEAM = MSD5A9BZTN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -309,6 +322,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		970A12E12A7B5AF100F71C24 /* Build configuration list for PBXProject "cfdash" */ = {
+		970A12E12A7B5AF100F71C24 /* Build configuration list for PBXProject "CloudflareApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				970A12F22A7B5AF400F71C24 /* Debug */,
@@ -334,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		970A12F42A7B5AF400F71C24 /* Build configuration list for PBXNativeTarget "cfdash" */ = {
+		970A12F42A7B5AF400F71C24 /* Build configuration list for PBXNativeTarget "CloudflareApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				970A12F52A7B5AF400F71C24 /* Debug */,
