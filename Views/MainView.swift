@@ -1,35 +1,34 @@
-//
-//  ContentView.swift
-//  cfdash
-//
-//  Created by Lsong on 8/3/23.
-//
-
 import SwiftUI
 
-struct ContentView: View {
-    @State var showingSetting = false
+
+struct MainView: View {
+    @State private var showingSetting = false
+    @StateObject private var cloudflareClient = CloudflareClient()
+    @StateObject private var domainViewModel: DomainViewModel
+    
+    init() {
+        _domainViewModel = StateObject(wrappedValue: DomainViewModel(cloudflareClient: CloudflareClient()))
+    }
+    
     var body: some View {
         NavigationView {
-            List() {
-                NavigationLink(destination: DomainView()){
-                    Text("Domains")
+            List {
+                NavigationLink(destination: DomainListView()) {
+                    Label("Domains", systemImage: "globe")
                 }
             }
             .navigationTitle("Cloudflare")
-            .navigationBarItems(trailing: Button(action: {
-                showingSetting = true
-            }){
-                Image(systemName: "gear")
-            })
-            .sheet(isPresented: $showingSetting, content: {
+            .toolbar {
+                Button(action: { showingSetting = true }) {
+                    Image(systemName: "gear")
+                }
+            }
+            .sheet(isPresented: $showingSetting) {
                 SettingView(isPresented: $showingSetting)
-            })
+                    .environmentObject(cloudflareClient)
+            }
         }
-        
+        .environmentObject(cloudflareClient)
+        .environmentObject(domainViewModel)
     }
-}
-
-#Preview {
-    ContentView()
 }

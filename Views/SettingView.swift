@@ -1,33 +1,50 @@
-//
-//  SettingView.swift
-//  CloudflareApp
-//
-//  Created by Lsong on 8/3/23.
-//
 
 import SwiftUI
 
 struct SettingView: View {
     @Binding var isPresented: Bool
-    @AppStorage("token") var token: String = "wDy3k0rtaunqwvEhb97WoXYXTEbP8ORjBz2DDNx6"
+    @AppStorage("email") private var email: String = ""
+    @AppStorage("apiKey") private var apiKey: String = ""
+    @EnvironmentObject var cloudflareClient: CloudflareClient
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             Form {
-                Section("Basic") {
-                    TextField("Email", text: $token)
-                    TextField("Key", text: $token)
+                Section("Cloudflare Account") {
+                    TextField("Email", text: $email)
+                        .autocapitalization(.none)
+                        .keyboardType(.emailAddress)
+                    SecureField("API Key", text: $apiKey)
                 }
                 
-                NavigationLink(destination: AboutView()) {
-                    Text("About")
+                Section {
+                    Button("Save") {
+                        saveCredentials()
+                    }
+                }
+                
+                Section {
+                    NavigationLink("About", destination: AboutView())
                 }
             }
             .navigationTitle("Settings")
-            .navigationBarItems(trailing: Button(action: {
-                isPresented = false
-            }) {
-                Text("Done")
-            })
+            .toolbar {
+                Button("Cancel") {
+                    isPresented = false
+                }
+            }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Notification"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
         }
+    }
+    
+    private func saveCredentials() {
+        cloudflareClient.email = email
+        cloudflareClient.apiKey = apiKey
+        showAlert = true
+        alertMessage = "Credentials saved successfully"
     }
 }

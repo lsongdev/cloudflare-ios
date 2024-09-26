@@ -10,10 +10,11 @@
 		970A12EA2A7B5AF100F71C24 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A12E92A7B5AF100F71C24 /* App.swift */; };
 		970A12EC2A7B5AF100F71C24 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970A12EB2A7B5AF100F71C24 /* MainView.swift */; };
 		970A12EE2A7B5AF400F71C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970A12ED2A7B5AF400F71C24 /* Assets.xcassets */; };
-		970A12F12A7B5AF400F71C24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970A12F02A7B5AF400F71C24 /* Preview Assets.xcassets */; };
 		97109F032A7B6A93008D5462 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97109F022A7B6A93008D5462 /* SettingView.swift */; };
 		97109F052A7B6FF4008D5462 /* DomainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97109F042A7B6FF4008D5462 /* DomainView.swift */; };
 		97109F072A7B7184008D5462 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97109F062A7B7184008D5462 /* AboutView.swift */; };
+		97602A772CA543D40068585D /* CloudflareClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97602A762CA543CC0068585D /* CloudflareClient.swift */; };
+		97602A792CA5472A0068585D /* DNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97602A782CA547270068585D /* DNSView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,10 +22,11 @@
 		970A12E92A7B5AF100F71C24 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		970A12EB2A7B5AF100F71C24 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		970A12ED2A7B5AF400F71C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		970A12F02A7B5AF400F71C24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97109F022A7B6A93008D5462 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		97109F042A7B6FF4008D5462 /* DomainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainView.swift; sourceTree = "<group>"; };
 		97109F062A7B7184008D5462 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		97602A762CA543CC0068585D /* CloudflareClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudflareClient.swift; sourceTree = "<group>"; };
+		97602A782CA547270068585D /* DNSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +44,6 @@
 			isa = PBXGroup;
 			children = (
 				970A12ED2A7B5AF400F71C24 /* Assets.xcassets */,
-				970A12EF2A7B5AF400F71C24 /* Preview Content */,
 				970A12E82A7B5AF100F71C24 /* Views */,
 				970A12E72A7B5AF100F71C24 /* Products */,
 			);
@@ -61,19 +62,13 @@
 			children = (
 				970A12E92A7B5AF100F71C24 /* App.swift */,
 				970A12EB2A7B5AF100F71C24 /* MainView.swift */,
-				97109F022A7B6A93008D5462 /* SettingView.swift */,
+				97602A782CA547270068585D /* DNSView.swift */,
 				97109F042A7B6FF4008D5462 /* DomainView.swift */,
 				97109F062A7B7184008D5462 /* AboutView.swift */,
+				97109F022A7B6A93008D5462 /* SettingView.swift */,
+				97602A762CA543CC0068585D /* CloudflareClient.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		970A12EF2A7B5AF400F71C24 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				970A12F02A7B5AF400F71C24 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +129,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				970A12F12A7B5AF400F71C24 /* Preview Assets.xcassets in Resources */,
 				970A12EE2A7B5AF400F71C24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +142,8 @@
 			files = (
 				97109F032A7B6A93008D5462 /* SettingView.swift in Sources */,
 				970A12EC2A7B5AF100F71C24 /* MainView.swift in Sources */,
+				97602A772CA543D40068585D /* CloudflareClient.swift in Sources */,
+				97602A792CA5472A0068585D /* DNSView.swift in Sources */,
 				97109F052A7B6FF4008D5462 /* DomainView.swift in Sources */,
 				970A12EA2A7B5AF100F71C24 /* App.swift in Sources */,
 				97109F072A7B7184008D5462 /* AboutView.swift in Sources */,
@@ -283,22 +279,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
-				DEVELOPMENT_TEAM = MSD5A9BZTN;
+				DEVELOPMENT_TEAM = 2ZHWSJ25BU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Cloudflare;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.lsong.cfdash;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lsong.cf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -313,22 +310,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
-				DEVELOPMENT_TEAM = MSD5A9BZTN;
+				DEVELOPMENT_TEAM = 2ZHWSJ25BU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Cloudflare;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.lsong.cfdash;
+				PRODUCT_BUNDLE_IDENTIFIER = org.lsong.cf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
